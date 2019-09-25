@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">StarterChapter05</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="red_fragment">Red Fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="blue_fragment">Blue Fragment</string>
 </resources>
