@@ -46,7 +46,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/pushups" />
+        app:srcCompat="@drawable/pushups"
+        android:onClick="handlerPushup"/>
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -57,6 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        android:onClick="handlerDips"
         app:srcCompat="@drawable/dips" />
 
     <ImageButton
