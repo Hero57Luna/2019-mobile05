@@ -18,9 +18,17 @@ public class FitnessActivity extends AppCompatActivity {
     }
 
     public void handlerHand(View view) {
+        HandFragment handFragment = (HandFragment)getSupportFragmentManager().findFragmentByTag("Hand_Fragment");
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.place_fragment_here, new HandFragment());
-        fragmentTransaction.commit();
+        if(handFragment != null && handFragment.isVisible()) {
+            fragmentTransaction.commit();
+        }
+        else {
+            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            fragmentTransaction.replace(R.id.place_fragment_here, new HandFragment(), "Hand_Fragment");
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
 
     }
 }
