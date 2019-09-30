@@ -1,6 +1,7 @@
 package polinema.ac.id.starterchapter05.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
@@ -16,21 +17,35 @@ public class DynamicActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dynamic);
-    }
 
-    public void handlerClickLoadRedFragment(View view) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        fragmentTransaction.replace(R.id.dynamic_fragment_placeholder,new RedFragment(), "RED FRAGMENT");
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
     }
 
     public void handlerClickLoadBlueFragment(View view) {
+        BlueFragment blueFragment = (BlueFragment) getSupportFragmentManager().findFragmentByTag("BLUE_FRAGMENT");
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-        fragmentTransaction.replace(R.id.dynamic_fragment_placeholder, new BlueFragment(),"BLUE FRAGMENT");
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        if(blueFragment != null && blueFragment.isVisible()) {
+            fragmentTransaction.commit();
+        }
+        else {
+            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            fragmentTransaction.replace(R.id.dynamic_fragment_placeholder, new BlueFragment(), "BLUE_FRAGMENT");
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
+    }
+
+
+    public void handlerClickLoadRedFragment(View view) {
+        RedFragment redFragment = (RedFragment) getSupportFragmentManager().findFragmentByTag("RED_FRAGMENT");
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        if(redFragment != null && redFragment.isVisible()) {
+            fragmentTransaction.commit();
+        }
+        else {
+            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+            fragmentTransaction.replace(R.id.dynamic_fragment_placeholder, new RedFragment(), "RED_FRAGMENT");
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
     }
 }

@@ -21,7 +21,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="handlerClickLoadBlueFragment"
-        android:text="Load Blue Fragment 	"
+        android:text="Load Blue Fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,3 +45,4 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
