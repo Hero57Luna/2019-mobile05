@@ -27,9 +27,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DynamicActivity.class);
         startActivity(intent);
     }
-
-    public void handlerClickPraktikumFragment(View view) {
-        Intent intent = new Intent(this, FitnessActivity.class);
-        startActivity(intent);
-    }
 }

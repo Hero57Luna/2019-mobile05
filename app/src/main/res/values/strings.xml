@@ -9,7 +9,15 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="handstand_dips">The handstand push-up also called the vertical push-up
+    or the inverted push-up also called "commandos" is a type of push-up exercise
+    where the body is positioned in a handstand. To prepare the strength until one has built
+        adequate balance</string>
     <string name="handstand_pushups">The handstand push-up also called the vertical push-up
+    or the inverted push-up also called "commandos" is a type of push-up exercise
+    where the body is positioned in a handstand. To prepare the strength until one has built
+        adequate balance</string>
+    <string name="handstand_handstand">The handstand push-up also called the vertical push-up
     or the inverted push-up also called "commandos" is a type of push-up exercise
     where the body is positioned in a handstand. To prepare the strength until one has built
         adequate balance</string>
